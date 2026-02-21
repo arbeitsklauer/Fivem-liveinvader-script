@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liveinvader</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&family=Outfit:wght@700&family=Inter:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="app" style="display: none;">
+        <div class="main-screen">
+            <!-- CUSTOM TITLE / WATERMARK -->
+            <div class="ui-title-container">
+                <div class="title-silent">Silent</div>
+                <div class="title-lifeinvader">LIFEINVADER</div>
+            </div>
+
+            <!-- BG IMAGE LAYER (Bottom) -->
+            <div class="bg-image-overlay"></div>
+
+            <!-- BACKGROUND GRADIENT LAYER -->
+            <div class="ui-background"></div>
+
+            <!-- MAIN MESSAGE BOX (1:1 FIGMA) -->
+            <div class="message-box">
+                <textarea id="ad-input" placeholder="Schreibe deine Anzeige hier..."></textarea>
+            </div>
+
+            <!-- LEFT CONTAINER (1:1 FIGMA) -->
+            <div class="left-container">
+                <div class="header-container">
+                    <div class="title-primary">Letzte Anzeigen</div>
+                    <div class="title-secondary">Hier siehst du die letzten Anzeigen</div>
+                </div>
+                <div id="ad-list" class="feed-scroll">
+                    <!-- Ads will be added here dynamically -->
+                </div>
+            </div>
+
+            <!-- COST INDICATOR (1:1 FIGMA) -->
+            <div class="cost-indicator">
+                <i class="fas fa-coins"></i>
+                <div class="cost-text">Kosten: <span id="current-cost">0$</span></div>
+            </div>
+
+            <!-- ACTION BUTTONS (1:1 FIGMA) -->
+            <div id="send-btn-cash" class="action-btn">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <div id="send-btn-card" class="action-btn">
+                <i class="fas fa-credit-card"></i>
+            </div>
+
+            <!-- CLOSE BUTTON (Top Right) -->
+            <div id="close-btn" class="close-wrapper">
+                <div class="close-bg">
+                    <div class="close-icon-cross"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for notifications like Image 1 -->
+    <div id="notification-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
